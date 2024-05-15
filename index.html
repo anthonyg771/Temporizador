@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+</head>
+<body>
+    <div id="app">
+        <div id="divContent">
+            <label id="lblTempo">Tempo</label>
+            <input id="inputTempo"/>
+            <button onclick="iniciarTemporizador()" id ="btnStart">Start</button>
+        </div>
+        <div>
+            <label id="contadorTexto">0</label>
+        </div>
+        <div>
+            <label id="TextoResultado"></label>
+        </div>
+    </div>
+    <script>
+        function iniciarTemporizador(){
+            let tempo = parseInt(document.getElementById("inputTempo").value);
+            setInterval(()+> {
+                document.getElementById("TextoResultado").innerText =  "Terminou!";
+                return;
+            }else{
+        
+                tempo = tempo - 1;
+                document.getElementById("contadorTexto").innerTexto = tempo;
+
+            }, 1000);
+        }  
+             
+        
+    </script>
+</body>
+</html>
